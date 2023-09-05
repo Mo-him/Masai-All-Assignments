@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age_check</title>
+    <style>
+        #Parent{
+            width: 20%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            padding-left: 25px;
+            margin-top: 120px;
+            border-radius: 20px;
+        }
+        form {
+            font-size: 40px;
+            align-items: center;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="Parent">
+        <form action="">
+            <label for="age">Driving Age:</label><br>
+            <input type="number" id="number" placeholder="Enter your age"> <br>
+            <input type="submit" id="check" value="valid">
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", ageCheck);
+    var checkage = document.getElementById("check");
+    checkage.value = "Check Age";
+
+    function ageCheck() {
+        event.preventDefault();
+        var number = document.getElementById("number").value;
+
+        if (number == 18 ) {
+            alert("You are just old enough to drive in India!");
+        }
+        else if(number > 18){
+            alert("You can drive in India!");
+        }
+        else if(number < 18){
+            alert("You can't drive in India");
+        }
+    }
+</script>

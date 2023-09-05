@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  background-color: rgba(6, 249, 6, 0.432);
+  background-image: url("https://content.asos-media.com/-/media/homepages/unisex/homepages/2021/12_dec/sale/xmas-sale-2021/single-gradient/5/desktop.jpg");
+  background-image: url(https://inklingstatic.a.ssl.fastly.net/multipass_static_assets/20220517.182934z.1cbaa2af/images/axis-library-background.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  content: "";
+  
+}
+.modal{
+  background-color: white;
+  color:rgba(1, 78, 1, 0.8);
+  /* background-color: rgba(255, 255, 255,.1); */
+  /* background-image: url(https://inklingstatic.a.ssl.fastly.net/multipass_static_assets/20220517.182934z.1cbaa2af/images/axis-library-background.png); */
+  padding: 10px;
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  align-items: center;
+  margin-top: 100px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.modal>Button{
+  color: white;
+  background-color: rgba(1, 78, 1, 0.8);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

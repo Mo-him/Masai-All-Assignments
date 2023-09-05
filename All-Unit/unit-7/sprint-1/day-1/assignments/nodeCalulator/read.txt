@@ -1,0 +1,44 @@
+Node js  :- 
+
+The replt feature of node is very use full in experimenting  with node.js codes and  to debug javascript codes
+
+Read - Reads useers  input parses the input into js data-structure,
+
+Eval - Takes and evaluates tha data-structure,
+
+Print - Print the result 
+
+Loop _loops the above command  until the user presses ctrl+c twice. 
+
+
+interpretedted error check code reaches a line  of  point where  error  line no. words
+nodes come with predefined  
+
+ core module:-  index.js is module  user genrated  modules 
+
+ third party module  
+ client server  Architecthure  
+ 2tuer Architecthure
+
+ client -React 
+
+ server - Api Server 
+
+
+ DNS -Domain name Server
+
+
+ Rest Api
+ EndPoint  -
+ method -
+  Headers -
+  Body -
+
+ 
+
+two categories 
+get data - no change in data happense  get method  is used  
+
+2. if the request should  change any data 
+Adddinfg new data : POST /PUT 
+

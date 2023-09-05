@@ -1,0 +1,20 @@
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: bisque;
+    
+}
+input , a {
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+}
+#hotels_list{
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    text-align: center;
+}
+#hotel{
+    margin: 20px;
+}

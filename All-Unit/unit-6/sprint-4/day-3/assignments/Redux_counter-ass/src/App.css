@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  margin: auto;
+  width: 30%;
+}
+.text{
+  text-align: center;
+  font-size: x-large;
+  color: black;
+}
+button{
+  font-size: xx-large;
+  background-color:aquamarine;
+  padding: 25px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="display">
+          <input id="n1" type="number" placeholder="Enter Number 1" />
+          <input id="n2" type="number" placeholder="Enter Number 2" />
+        </div>
+        <div class="btn">
+          <button onclick="compute('add')">Add</button>
+          <button onclick="compute('subtract')">Subract</button>
+          <button onclick="compute('multiply')">Multiply</button>
+          <button onclick="compute('divide')">Divide</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+
+    
+  var n1 = 0;
+  var n2 = 0;
+
+  function compute(val) {
+    var ans = 0;
+    n1 = Number(document.getElementById("n1").value);
+    n2 = Number(document.getElementById("n2").value);
+
+    if (n1 == 0 && n2 == 0){
+        alert("No value entered");
+    }
+    else{
+      if (val == 'add'){
+        ans = n1+n2;
+        // alert(ans);
+      }
+      else if (val == 'subtract'){
+        ans = n1-n2;
+        // alert(ans);
+      }
+      else if (val == 'multiply'){
+        ans = n1*n2;
+        // alert(ans);
+      } 
+      else if (val == 'divide'){
+        ans = n1/n2;
+        ans = ans.toFixed(4);
+        // alert(ans);
+      }
+
+      alert(ans);
+      document.getElementById("n1").value = "";
+      document.getElementById("n2").value = "";
+    }
+  }
+</script>

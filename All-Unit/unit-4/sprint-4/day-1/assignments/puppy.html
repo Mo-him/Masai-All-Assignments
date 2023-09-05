@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puppy</title>
+</head>
+<body>
+    <img 
+    height="100%" 
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI_Zwc2fzvN5f6VY8HzhyqygL_senKK1D9pQ&usqp=CAU" 
+    alt="puppy">
+    <div>
+        <p>Like:<span id = "likes"></span></p>
+        <p>DisLike:<span id = "dislikes"></span></p>
+    </div>
+    <br>
+    <button id = "likebtn">Like👍</button>
+    <button id = "dislikebtn">Dislik👎</button>
+</body>
+</html>
+
+<script>
+    document.getElementById("likebtn").addEventListener("click", likefun);
+
+    var likecount = localStorage.getItem("puppylikes") || 0;
+    document.getElementById("likes").innerText = likecount;
+
+    function likefun(){
+        likecount++;
+        document.getElementById("likes").innerText = likecount;
+        localStorage.setItem("puppylikes", likecount);
+    }
+
+    document.getElementById("dislikebtn").addEventListener("click", dislikefun);
+
+    var dislikecount = localStorage.getItem("puppydislikes") || 0;
+    document.getElementById("dislikes").innerText = dislikecount;
+
+    function dislikefun(){
+        dislikecount++;
+        document.getElementById("dislikes").innerText = dislikecount;
+        localStorage.setItem("puppydislikes", dislikecount);
+    }
+</script>

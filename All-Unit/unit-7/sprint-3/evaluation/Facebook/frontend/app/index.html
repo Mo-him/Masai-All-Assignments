@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+      body {
+          background-color: #f2f2f2;
+          font-family: Arial, sans-serif;
+          text-align: center;
+      }
+      h1 {
+          font-size: 3em;
+          margin-top: 3em;
+      }
+      button {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 1.2em;
+          margin-top: 2em;
+          cursor: pointer;
+      }
+      nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav li {
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+  </style>
+</head>
+<nav>
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="login.html">Log In</a></li>
+      <li><a href="posts.html">Posts</a></li>
+  </ul>
+</nav>
+<body>
+  
+  <h1>Welcome to Facebook</h1>
+  <button id="signup-btn">Sign Up</button>
+  <button id="login-btn">Log In</button>
+
+  <script>
+      const signupBtn = document.getElementById("signup-btn");
+      const loginBtn = document.getElementById("login-btn");
+
+      signupBtn.addEventListener("click", function() {
+          window.location.href = "signup.html";
+      });
+
+      loginBtn.addEventListener("click", function() {
+          window.location.href = "login.html";
+      });
+  </script>
+</body>
+</html>

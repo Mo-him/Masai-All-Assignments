@@ -1,0 +1,21 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: antiquewhite;
+    margin: 20px;
+}
+#user-form{
+    margin-left: 600px;
+    margin-right: 600px;
+}
+#form{
+    display: grid;
+    
+    grid-template-columns: repeat(1, 1fr);
+}
+input{
+    margin-bottom: 20px;
+}
+select{
+    margin-bottom: 20px;
+}

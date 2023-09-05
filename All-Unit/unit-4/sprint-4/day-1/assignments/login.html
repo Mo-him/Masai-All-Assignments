@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        form{
+            /*border: 2px solid red;*/
+            height: 500px;
+            width: 30%;
+            margin: auto;
+            padding: 30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+        }
+        input{
+            block-size: 30px;
+            width: 100%;
+            height: 45px;
+            border-radius: 5px;
+        }
+        #log{
+            background-color: #2563eb;
+            color: white;
+            font-size: 20px;
+        }
+        h2{
+            text-align: center;
+        }
+        img{
+            padding-left: 680px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "signup">
+            <img src="https://sso.masaischool.com/brand_dark.svg" alt="masai">
+            <form onsubmit="login(event)">
+                <h2>Login</h2>
+                <label>Email</label>
+                <br><br>
+                <input type="Email" id = "login_Email" placeholder="Enter Email">
+                <br><br><br>
+                <label>Password</label>
+                <br><br>
+                <input type="Password" id="login_password" placeholder="Enter Password">
+                <br><br><br>
+                <input type="submit" id="log" value = "login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src = "./signup.js"> </script>

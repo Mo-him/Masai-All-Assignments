@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    margin: -3px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    margin: -1px 0;
+}
+/*#member{
+    border: 2px solid red;
+    height: 200px;
+    width: 100%;
+}*/
+#member>div{
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    gap: 20px;
+    margin-left: 130px;
+}
+#member>div>div{
+    /*border: 1px solid blue;*/
+    height: 200px;
+    padding: 10px;
+    margin-left: 10px;
+}
+#investers > div{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 20px;
+    margin-left: 130px;
+    
+}
+#investers>div>div{
+    /*border: 1px dashed green;*/
+    height: 400x;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#investers>div>div>img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+#investers>div>div>div>img{
+    width: 40%;
+    margin-left: 80px;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+
+const userSchema = mongoose.Schema({
+       Name: String,
+       Email: String,
+       social_profile: {
+              linkedIn: String,
+              facebook: String,
+              Twiter: String,
+              Github: String,
+              Instagram: String
+       },
+       Addresses: [
+              {
+                     Line1: String,
+                     City: String,
+                     State: String,
+                     PinCode: String
+              }
+       ],
+       Category: {
+              Name: String
+       }
+
+})
+
+const blogSchema = mongoose.Schema({
+       Title: String,
+       Body: String,
+       user: {
+              type: mongoose.Type.objectId,
+              ref: 'User'
+       }
+})
+
+const commentSchema = mongoose.Schema({
+       Blog_id: mongoose.Type.ObjectId,
+       User_id: mongoose.Type.ObjectId,
+       Message: String,
+       Rating: String
+})
+const likeSchema = mongoose.Schema({
+       Blog_id: mongoose.Type.ObjectId,
+       User_id: mongoose.Type.ObjectId,
+       Emoji: String
+})
+
+

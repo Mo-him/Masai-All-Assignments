@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-COMMERCE I</title>
+  </head>
+  <body>
+    <form>
+      <label>Name of Product</label>
+      <input id="name" type="text" placeholder="Product name" />
+      <label>Category</label>
+      <input id="category" type="text" placeholder="Product name" />
+      <label>Image URL</label>
+      <input id="image" type="text" placeholder="Product name" />
+      <label>Price</label>
+      <input id="price" type="text" placeholder="Product name" />
+      <label>Gender</label>
+      <select id="gender" name=" Gender">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+      <label>Sold</label>
+      <input id="sold" type="text" placeholder="sold or not" value="False" />
+      <button id="add">Submit</button>
+    </form>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", getData);
+
+  var arrData = JSON.parse(localStorage.getItem("arraylist")) || [];
+
+  function getData() {
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var cat = document.getElementById("category").value;
+    var image = document.getElementById("image").value;
+    var price = document.getElementById("price").value;
+    var gender = document.getElementById("gender").value;
+    var sold = document.getElementById("sold").value;
+
+    // console.log(name, cat, image, price, gender, sold);
+
+    function Object(n, c, i, p, g, s) {
+      this.name = n;
+
+     
+      this.cat = c;
+      this.image = i;
+      this.price = p;
+      this.gender = g;
+      this.sold = s;
+      console.log(s);
+    }
+
+    let objData = new Object(name, cat, image, price, gender, sold);
+
+    // console.log(objData);
+
+    arrData.push(objData);
+    // console.log(arrData);
+    localStorage.setItem("Products", JSON.stringify(arrData));
+  }
+
+   
+
+</script>

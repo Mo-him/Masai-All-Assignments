@@ -1,0 +1,21 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: brown;
+    height: 80px;
+    font-size: 25px;
+}
+
+#navbar div{
+    margin: 10px;
+}
+#navright{
+    display: flex;
+}
+#groceries{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    text-align: center;
+}

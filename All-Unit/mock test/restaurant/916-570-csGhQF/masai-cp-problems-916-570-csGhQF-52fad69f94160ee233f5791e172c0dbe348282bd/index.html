@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+
+      .nav{
+        display: flex;
+        justify-content: space-around;
+        background-color: aqua;
+      }
+      a{
+        margin-top: 25px;
+        text-decoration: none;
+      }
+      #restaurant-container{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+
+    
+}
+      /* All Your css for Home page goes here  */
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai Restaurant Finder</h1>
+      <a href="./index.html">Home</a>
+      <a href="./favourites.html">Favourites</a>
+    </div>
+    <select id="filter" onchange="fetchType()">
+      <option value="">Filter By Category</option>
+      <option value="cafe">cafe</option>
+      <option value="ethnic">ethnic</option>
+      <option value="fast_food">fast_food</option>
+    </select>
+    <h1 id="alert"></h1>
+    <div id="restaurant-container">
+      <!-- Here Append All the Products  -->
+    </div>
+  </body>
+  <script>
+    let restaurantm =JSON.parse(localStorage.getItem ("restaurantm")) || [];
+    const url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/getrestaurants?limit=30`;
+    let getData= async() =>{
+      let response = await fetch(url);
+      let data = await response.json();
+      restaurantm = data;
+      localStorage.setItem("restaurantm",JSON.stringify(restaurantm));
+      displayData(restaurantm.data);
+    }
+    getData();
+
+    let displayData=(data)=>{
+      document.getElementById("restaurant-container").innerHTML = null;
+      data.forEach((element)=>{
+
+        let box = document.createElement("div");
+        box.setAttribute("class","box");
+        let img = document.createElement("img");
+        img.src = element.image;
+        let  h2 = document.createElement("h2");
+        h2.innerHTML = element.name;
+        let price = document.createElement("h3");
+        price.innerHTML="₹"+ element.price_starts_from;
+        let type = document.createElement("p");
+        type.innerHTML=element.type;
+        let rate = document.createElement("p");
+        rate.innerHTML=element.rating;
+
+        let favbtn = document.createElement("button");
+        favbtn.textContent='Favourites';
+        favbtn.addEventListener('click', ()=>{
+
+      })
+
+        box.append(img,h2,price,type,rate,favbtn);
+        document.getElementById("restaurant-container").append(box);
+      })
+    }
+
+  function fetchType()
+  {
+    let category = document.getElementById("filter").value;
+    if (category == ""){
+        displayData(restaurantm.data);
+        return;
+    }
+    let list = restaurantm.data.filter((elem)=>{
+        return elem.type == category;
+        
+    })
+    console.log(list);
+    displayData(list);
+  }
+    // All your JS code for Home Page goes here
+  </script>
+</html>

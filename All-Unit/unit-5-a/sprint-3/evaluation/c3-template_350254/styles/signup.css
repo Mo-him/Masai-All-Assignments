@@ -1,0 +1,19 @@
+#form{
+    text-align: center;
+    margin: 10px;
+}
+input{
+    margin: 10px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+#navbar{
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    padding-top: 20px;
+    font-size: 30px;
+}

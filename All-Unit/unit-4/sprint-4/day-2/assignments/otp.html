@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        #Parent {
+            width: 21%;
+            margin: auto;
+            padding-left: 25px;
+            margin-top: 120px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 20px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        input {
+            width: 90%;
+            border-radius: 7px;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-top: 20px;   
+        }
+        input[type="month"] {
+            width: 90%;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: coral;
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+        form {
+            font-size: 18px;
+            align-items: center;
+        }
+        #Pay:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Parent">
+        <form action="">
+            <label for="number">Enter your Otp:</label> <br>
+            <input type="text" name="" id="otp" placeholder="Enter Your 4 digit Otp"><br>
+            
+            <input type="submit" id="Pay" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+
+ document.querySelector("form").addEventListener("submit",done);
+ function done(){
+    event.preventDefault();
+   var number=document.getElementById("otp").value;
+   if(number.length==4){
+    window.location.href="done.html";
+   }else{
+    alert("Wrong Otp");
+   }
+ }
+</script>

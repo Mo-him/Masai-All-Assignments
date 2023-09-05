@@ -1,0 +1,27 @@
+/* Write css related to the Home page here  */
+
+
+#navbar{
+    text-align: center;
+}
+
+#create{
+    text-align: center;
+    /*border: 2px solid red;*/
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+form{
+    display: grid;
+    padding: 15px;
+}
+form>input{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+form>select{
+    padding: 10px;
+    margin-bottom: 15px;
+}

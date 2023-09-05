@@ -1,0 +1,41 @@
+#container{
+  width: 90%;
+  height: auto;
+  margin: auto;
+  margin-top: 5px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+#profile{
+  width: 60%;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+#todo{
+  width: 130%;
+  margin-left: -200px;
+  text-align: center;
+}
+
+img{
+  width: 180px;
+}
+
+h2{
+  text-align: left;
+}
+
+button{
+  margin: 20px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+}

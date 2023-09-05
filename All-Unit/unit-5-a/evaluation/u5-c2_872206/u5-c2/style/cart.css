@@ -1,0 +1,10 @@
+#cart_total{
+    text-align: center;
+}
+#cart{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    text-align: center;
+}
